@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<!-- Style Sheets -->
+		<!-- Google Font Style-->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
+		<!-- ProductPagesStyle Sheet -->
+		<link rel="stylesheet" type="text/css" href="../CSS/ProductPagesStyle.css">
+		<!-- Navigation Bar Javascript -->
+		<link rel="stylesheet" type="text/css"  href="../CSS/Nav.css">
+		<!-- Get jquery library -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+		<!-- Cart Javascript -->
+		<script type="text/javascript" src="../Javascript/Cart.js"></script>
+		<!-- Navigation Bar Javascript -->
+		<script type="text/javascript" src="../Javascript/Nav.js"></script>
+		<title>HipsterTrends.com</title>
+	</head>
+	<body>
+		<header>
+			<img  alt="" src="../Images/Logo/hipsterlogo.jpeg" id="logo">
+			<h1>Hipster</h1>
+			<h1> Trends</h1>
+		</header>
+		<!--Navigation Bar -->
+		<nav class ="nav">
+			<div class="handle" onclick="dropdownMenu()">
+				<ul>
+					<li>Menu</li>
+				</ul>
+			</div>
+			<ul id="menu" class="noShowing">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="Services.html">Services</a></li>
+				<li><a href="Categories.html">Categories</a></li>
+				<li><a href="Contact.html">Contact Details</a></li>
+				<li><a href="OperatingHours.html">Operating Hours</a></li>
+				<li><a href="Cart.html">Cart</a></li>
+			</ul>
+		</nav>
+		<!-- End Navigation Bar -->
+		<!-- Popup content -->
+		<div id="popupContent">
+			<h2>Popup Message</h2>
+			<div>
+				<p id ="message"></p>
+			</div>
+			<div>
+				<input id="closePopupButton" type="button" class="button" value="Close Popup" />
+			</div>
+		</div>
+		<!-- Wrap to contain all page content-->
+		<div id="content">
+			<!--Use an unordered list to structure the items -->
+			<ul class="products">
+				<!-- The item contains an image,inputs and values related to the item --> 
+				<li class ="item1">
+					<img alt ="" src="../Images/Jeans/Jeans1.jpeg"/>
+					<div class="priceHolder">
+						<p id="name1">Grey Skinny Jeans  </p>
+						<input type="hidden" id="price1" value="30">
+						<p>Price:&pound;30</p>
+						<select id="size1">
+							<option value="0">Size</option>
+							<option value="28S">28S</option>
+							<option value="30S">30S</option>
+							<option value="32S">32S</option>
+							<option value="34S">34S</option>
+							<option value="28R">28R</option>
+							<option value="30R">30R</option>
+							<option value="32R">32R</option>
+							<option value="34R">34R</option>
+							<option value="36R">36R</option>
+							<option value="38R">38R</option>
+							<option value="30L">30L</option>
+							<option value="32L">32L</option>
+							<option value="34L">34L</option>
+							<option value="36L">36L</option>
+						</select>
+						<select id="quantity1">
+							<option value="0">Quantity</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>		
+						</select>	
+						<button class= "button" onclick="BuyItem1()" >Add to Cart</button>
+					</div>
+				</li>
+				<li class="item2">
+					<img alt="" src="../Images/Jeans/Jeans2.jpg"/>
+					<div class="priceHolder">
+						<p id="name2">Black Jeans</p>
+						<input type="hidden" id="price2" value="34">
+						<p>Price:&pound;34</p>
+						<select id="size2">
+							<option value="0">Size</option>
+							<option value="28S">28S</option>
+							<option value="30S">30S</option>
+							<option value="32S">32S</option>
+							<option value="34S">34S</option>
+							<option value="28R">28R</option>
+							<option value="30R">30R</option>
+							<option value="32R">32R</option>
+							<option value="34R">34R</option>
+							<option value="36R">36R</option>
+							<option value="38R">38R</option>
+							<option value="30L">30L</option>
+							<option value="32L">32L</option>
+							<option value="34L">34L</option>
+							<option value="36L">36L</option>
+						</select>
+						<select id="quantity2">
+							<option value="0">Quantity</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>		
+						</select>	
+						<button class= "button" onclick="BuyItem2()">Add to Cart</button>
+					</div>
+				</li>
+				<li class="item3">
+					<img alt="" src="../Images/Jeans/Jeans3.jpeg"/>
+					<div class="priceHolder">
+						<p id="name3">Blue Skinny Jeans</p>
+						<input type="hidden" id="price3" value="34">
+						<p>Price:&pound;34</p>
+						<select id="size3">
+							<option value="0">Size</option>
+							<option value="28S">28S</option>
+							<option value="30S">30S</option>
+							<option value="32S">32S</option>
+							<option value="34S">34S</option>
+							<option value="28R">28R</option>
+							<option value="30R">30R</option>
+							<option value="32R">32R</option>
+							<option value="34R">34R</option>
+							<option value="36R">36R</option>
+							<option value="38R">38R</option>
+							<option value="30L">30L</option>
+							<option value="32L">32L</option>
+							<option value="34L">34L</option>
+							<option value="36L">36L</option>
+						</select>
+						<select id="quantity3">
+							<option value="0">Quantity</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>	
+						<button class= "button" onclick="BuyItem3()">Add to Cart</button>
+					</div>
+				</li>
+				<li class="item4">
+					<img alt="" src="../Images/Jeans/Jeans4.jpeg"/>
+					<div class="priceHolder">
+						<p id="name4">Ripped Skinny Jeans</p>
+						<input type="hidden" id="price4" value="45">
+						<p>Price:&pound;45</p>
+						<select id="size4">
+							<option value="0">Size</option>
+							<option value="28S">28S</option>
+							<option value="30S">30S</option>
+							<option value="32S">32S</option>
+							<option value="34S">34S</option>
+							<option value="28R">28R</option>
+							<option value="30R">30R</option>
+							<option value="32R">32R</option>
+							<option value="34R">34R</option>
+							<option value="36R">36R</option>
+							<option value="38R">38R</option>
+							<option value="30L">30L</option>
+							<option value="32L">32L</option>
+							<option value="34L">34L</option>
+							<option value="36L">36L</option>						
+						</select>
+						<select id="quantity4">
+							<option value="0">Quantity</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>		
+						</select>	
+						<button class= "button" onclick="BuyItem4()">Add to Cart</button>				
+					</div>							
+				</li>
+				<li class="item5">
+					<img alt="" src="../Images/Jeans/Jeans5.jpeg"/>
+					<div class="priceHolder">
+						<p id="name5">Raw Blue Jeans</p>
+						<input type="hidden" id="price5" value="38">
+						<p>Price:&pound;38</p>
+						<select id="size5">
+							<option value="0">Size</option>
+							<option value="28S">28S</option>
+							<option value="30S">30S</option>
+							<option value="32S">32S</option>
+							<option value="34S">34S</option>
+							<option value="28R">28R</option>
+							<option value="30R">30R</option>
+							<option value="32R">32R</option>
+							<option value="34R">34R</option>
+							<option value="36R">36R</option>
+							<option value="38R">38R</option>
+							<option value="30L">30L</option>
+							<option value="32L">32L</option>
+							<option value="34L">34L</option>
+							<option value="36L">36L</option>
+						</select>
+						<select id="quantity5">
+							<option value="0">Quantity</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>	
+						<button class= "button" onclick="BuyItem5()">Add to Cart</button>
+					</div>
+				</li>
+				<li class="item6">
+						<img alt="" src="../Images/Jeans/Jeans6.jpeg"/>
+						<div class="priceHolder">
+						<p id="name6">Bleached Wash Jeans</p>
+						<input type="hidden" id="price6" value="30">
+						<p>Price:&pound;30</p>
+						<select id="size6">
+							<option value="0">Size</option>
+							<option value="28S">28S</option>
+							<option value="30S">30S</option>
+							<option value="32S">32S</option>
+							<option value="34S">34S</option>
+							<option value="28R">28R</option>
+							<option value="30R">30R</option>
+							<option value="32R">32R</option>
+							<option value="34R">34R</option>
+							<option value="36R">36R</option>
+							<option value="38R">38R</option>
+							<option value="30L">30L</option>
+							<option value="32L">32L</option>
+							<option value="34L">34L</option>
+							<option value="36L">36L</option>
+						</select>
+						<select id="quantity6">
+							<option value="0">Quantity</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+						<button class= "button" onclick="BuyItem6()">Add to Cart</button>
+					</div>
+				</li>
+				<li class="item7">
+					<img alt="" src="../Images/Jeans/Jeans7.jpeg"/>
+					<div class="priceHolder">
+						<p id="name7">Levi's Blue Slim Jeans</p>
+						<input type="hidden" id="price7" value="90">
+						<p>Price:&pound;90</p>
+						<select id="size7">
+							<option value="0">Size</option>
+							<option value="28S">28S</option>
+							<option value="30S">30S</option>
+							<option value="32S">32S</option>
+							<option value="34S">34S</option>
+							<option value="28R">28R</option>
+							<option value="30R">30R</option>
+							<option value="32R">32R</option>
+							<option value="34R">34R</option>
+							<option value="36R">36R</option>
+							<option value="38R">38R</option>
+							<option value="30L">30L</option>
+							<option value="32L">32L</option>
+							<option value="34L">34L</option>
+							<option value="36L">36L</option>
+						</select>
+						<select id="quantity7">
+							<option value="0">Quantity</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+						<button class= "button" onclick="BuyItem7()">Add to Cart</button>
+					</div>
+				</li>
+				<li class="item8">
+					<img alt="" src="../Images/Jeans/Jeans8.jpeg"/>
+					<div class="priceHolder">
+					<p id="name8">White Jeans</p>
+					<input type="hidden" id="price8" value="48">
+					<p>Price:&pound;48</p>
+					<select id="size8">
+						<option value="0">Size</option>
+						<option value="28S">28S</option>
+						<option value="30S">30S</option>
+						<option value="32S">32S</option>
+						<option value="34S">34S</option>
+						<option value="28R">28R</option>
+						<option value="30R">30R</option>
+						<option value="32R">32R</option>
+						<option value="34R">34R</option>
+						<option value="36R">36R</option>
+						<option value="38R">38R</option>
+						<option value="30L">30L</option>
+						<option value="32L">32L</option>
+						<option value="34L">34L</option>
+						<option value="36L">36L</option>
+					</select>
+					<select id="quantity8">
+						<option value="0">Quantity</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					<button class= "button" onclick="BuyItem8()" >Add to Cart</button>
+					</div>				
+				</li>
+			</ul>
+		</div>
+		<!-- Cart Div contains and displays  session data -->
+		<div class="cart">
+			<h2>Shopping Cart</h2>
+			<!-- table that would  get session data relating to what the customer buys  and adds to it using ids -->
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Quantity</th>
+						<th>Size</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<!-- The table body is here all the session data is displayed using its id  -->
+				<tbody id="cartTblBody">
+					<tr>
+						<td colspan="4"></td>
+					</tr>
+				</tbody>
+				<!-- Table footer contains the total price of what the customer has in the shopping cart -->
+				<tfoot>
+                    <tr>
+						<td colspan="3">Total</td>
+                        <td id="total">0 </td>
+                    </tr>
+                </tfoot>
+			</table>
+		</div>
+	</body>
+</html>

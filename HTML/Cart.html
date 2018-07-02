@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<!-- Style Sheets -->
+		<!-- Google Font Style-->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
+		<!-- Style Sheets -->
+		<link rel="stylesheet" type="text/css" href="../CSS/CartPageStyle.css">
+		<!-- Navigation Bar Javascript -->
+		<link rel="stylesheet" type="text/css" href="../CSS/Nav.css">
+		<!-- Get jquery library -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+		<!-- Cart Javascript -->
+		<script type="text/javascript" src="../Javascript/CartForms.js"></script>
+		<!-- Navigation Bar Javascript -->
+		<script type="text/javascript" src="../Javascript/Nav.js"></script>
+		<title>HipsterTrends.com</title>
+	</head>
+	<body>
+		<header>
+			<img  alt="" src="../Images/Logo/hipsterlogo.jpeg" id="logo">
+			<h1>Hipster</h1>
+			<h1> Trends</h1>
+		</header>
+		<!--Navigation Bar -->
+		<nav class ="nav">
+			<div class="handle" onclick="dropdownMenu()">
+				<ul>
+					<li>Menu</li>
+				</ul>
+			</div>
+			<ul id="menu" class="noShowing">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="Services.html">Services</a></li>
+				<li><a href="Categories.html">Categories</a></li>
+				<li><a href="Contact.html">Contact Details</a></li>
+				<li><a href="OperatingHours.html">Operating Hours</a></li>
+				<li><a href="Cart.html">Cart</a></li>
+			</ul>
+		</nav>
+		<!-- End Navigation Bar -->
+		<!-- Popup content -->
+		<div id="popupContent">
+			<h2>Popup Message</h2>
+			<div>
+				<p id ="message"></p>
+			</div>
+			<div>
+				<input id="closePopupButton" type="button" class="popUpButton" value="Close Popup" />
+			</div>
+		</div>
+		<!-- Wrap to contain all page content-->
+		<div id="content">
+			<section id="cartTable" class= "showCartTable">
+				<h2>Your Cart</h2>
+				<!-- table that would  get session data relating to what the customer buys  and adds to it using ids -->
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Quantity</th>
+							<th>Size</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<!-- The table body is here all the session data is displayed using its id  -->
+					<tbody id="cartTblBody">
+					</tbody>
+					<!-- Table footer contains the total price of what the customer has in the shopping cart -->
+					<tfoot>
+						<tr>
+							<td colspan="3">Total</td>
+							<td id="total">0 </td>
+						</tr>
+					</tfoot>
+				</table>
+				<div class="cart"></div>
+				<input type="submit" id="checkOut" value="CheckOut" onclick="displayDeliveryForm();" class ="button">
+			</section>
+			<section id="deliveryForm" class="hideDeliveryForm">
+				<h2>Your Order</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Quantity</th>
+							<th>Size</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<!-- The table body is here all the session data is displayed using its id  -->
+					<tbody id="orderTblBody">
+					</tbody>
+					<!-- Table footer contains the total price of what the customer has in the shopping cart -->
+					<tfoot>
+						<tr>
+							<td id="deliveryMethod"></td>
+							<td colspan="2">Total</td>
+							<td id="orderTotal">0 </td>
+						</tr>
+					</tfoot>
+				</table>
+				<div>
+					<h2>Delivery Methods</h2>
+					<p><input type="radio" class="radio" name="method" id="radio1" value="0" checked>Collect From Store Standard(3 - 7 days) &pound; 0.00</p>
+					<p><input type="radio" class="radio" name="method" id="radio2" value="3">Collect From Store Express(next day)&pound; 3.00</p>
+					<p><input type="radio" class="radio" name="method" id="radio3" value="4">Standard Deliver(up to 4 working days) &pound; 4.00</p>
+					<p><input type="radio" class="radio" name="method" id="radio4"  value="6"> Express/Nominated Day Delivery From &pound; 6.00</p>
+				</div>
+				<h2>Delivery Form</h2>
+				<table>
+					<tr>
+						<td>Full Name:</td>
+						<td><input type="text" class="required" name="fullname" ></td>
+					</tr>
+					<tr>
+						<td>Address Line1:</td>
+						<td><input type="text" class="required" name="addressline1" ></td>
+					</tr>
+					<tr>
+						<td>Address Line2:</td>
+						<td><input type="text" name="AddressLine2" class="required" name="addressline2" ></td>
+					</tr>
+					<tr>
+						<td>Town/City:</td>
+						<td><input type="text" class="required" name="towncity"></td>
+					</tr>
+					<tr>
+						<td>County:</td>
+						<td><input type="text" class="required" name="county"></td>
+					</tr>
+					<tr>
+						<td>Postcode:</td>
+						<td><input type="text" class="required"  name="postcode"></td>
+					</tr>
+					<tr>
+						<td>Country:</td>
+						<td><input type="text"  class="required" name="country"></td>
+					</tr>
+					<tr>
+						<td>Phone number:</td>
+						<td><input type="text" class="required" name="phoneNumber"></td>
+					</tr>
+				</table>
+				<h2>Payment Form</h2>
+				<table>
+					<tr>
+						<td>Cardholder's First Name:</td>
+						<td><input type="text" class="required" name="firstname"></td>
+					</tr>
+					<tr>
+						<td>Cardholder's Last Name:</td>
+						<td><input type="text" class="required"  name="lastname"></td>
+					</tr>	
+					<tr>
+						<td>Credit Card Number:</td>
+						<td><input type="text" class="required"  name="cardnum"></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+						Please enter the expiration date as follows:
+						two digits for the month and two digits for the year.
+						For example, January 2015 has to be entered as 0115:
+						</td>
+					</tr>
+					<tr>
+						<td>Expiration date (mmyy):</td>
+						<td><input type="text" class="required" name="expdate" maxlength="4"></td>
+						</tr>
+					<tr>
+						<td>Card Verification Code:</td>
+						<td><input type="password" class="required" name="cardcode"></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+						Please enter the address at which the bills are received:
+						</td>
+					</tr>
+					<tr>
+						<td>Street Address:</td>
+						<td><input type="text" class="required" name="address"></td>
+					</tr>
+					<tr>
+						<td>Town/City:</td>
+						<td><input type="text" class="required"  name="towncity2"></td>
+					</tr>
+					<tr>
+						<td>County:</td>
+						<td><input type="text" class="required"  name="county2"></td>
+					</tr>
+					<tr>
+						<td>Postcode:</td>
+						<td><input type="text" class="required" name="postcode2"></td>
+					</tr>
+					<tr>
+						<td>Country:</td>
+						<td><input type="text" class="required" name="country2"></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit" value="Submit Payment" id="SubmitPaymentBtn" class ="button"></td>
+					</tr>
+				</table>
+			</section>
+		</div>	
+	</body>
+</html>

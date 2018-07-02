@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<!-- Style Sheets -->
+		<!-- Google Font Style-->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
+		<!-- Navigation Style-->
+		<link rel="stylesheet" type="text/css"  href="../CSS/Nav.css">
+		<!-- Contact Style-->
+		<link rel="stylesheet" type="text/css"  href="../CSS/ContactAndOperatingStyle.css">
+		<!-- Google Maps Javascript
+		Uses code  generated from http://maps-generator.com -->
+		<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+		<script type='text/javascript'>
+			function init_map(){
+				var myOptions = {zoom:12,center:new google.maps.LatLng(53.22927860000001,-0.5413232999999309),mapTypeId: google.maps.MapTypeId.ROADMAP};
+				//adds location information to the canvas 
+				map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+				//Sets a marker on the canvas
+				marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(53.22927860000001,-0.5413232999999309)});
+				//Displays an info window which contains the address information of the store
+				infowindow = new google.maps.InfoWindow({content:'<strong>25</strong><br> Guildhall Street, <br>LN1 6XN Lincoln<br>'});
+				google.maps.event.addListener(marker, 'click', function(){
+					infowindow.open(map,marker);
+				});
+				infowindow.open(map,marker);
+			}
+			//onload display map canvas
+			google.maps.event.addDomListener(window, 'load', init_map);
+		</script>
+		<!--  End Google Maps Javascript -->
+		<!-- Navigation Bar Javascript -->
+		<script type="text/javascript" src="../Javascript/Nav.js"></script>
+		<!-- Content Form Javascript -->
+		<script type="text/javascript" src="../Javascript/ContactForm.js"></script>
+		<title>HipsterTrends.com</title>
+	</head>
+	<body>
+		<header>
+			<img alt="" src="../Images/Logo/hipsterlogo.jpeg" id="logo">
+			<h1>Hipster</h1>
+			<h1> Trends</h1>
+		</header>
+		<!--Navigation Bar -->
+		<nav class ="nav">
+			<div class="handle" onclick="dropdownMenu()">
+				<ul>
+					<li>Menu</li>
+				</ul>
+			</div>
+			<ul id="menu" class="noShowing">
+			  <li><a href="../index.html">Home</a></li>
+			  <li><a href="Services.html">Services</a></li>
+			  <li><a href="Categories.html">Categories</a></li>
+			  <li><a href="Contact.html">Contact Details</a></li>
+			  <li><a href="OperatingHours.html">Operating Hours</a></li>
+			  <li><a href="Cart.html">Cart</a></li>
+			</ul>
+		</nav>
+		<!--End Navigation Bar -->
+		<!-- Wrap to contain all page content-->
+		<div id="content">
+			<section>
+				<h2>Contact Form</h2>
+				<article>
+					<!-- Contact Form -->
+					<form id ="form">
+						<input type="text" name="fName" class="input" placeholder="First name" maxlength="32" required>
+						<br>
+						<input type="text" name="lName" class="input" placeholder="Last name" maxlength="32" required>
+						<br>
+						<input type="text" name="email" class="input" placeholder="Email" maxlength="40" required>
+						<br>
+						<select class ="input" id="select">
+							<option value ="0">Subject Of Your Inquiry Select Option</option>
+							<option value ="1">Sale Inquiry</option>
+							<option value ="2">Support Inquiry</option>
+							<option value ="3" >Website Feedback</option>
+						</select>
+						<br>
+						<h2>Inquiry:</h2>
+						<textarea class ="input" rows="4" cols="50" >
+						</textarea>
+						<br>
+						<!-- Signature Canvas Div that gets Hide on Mobile and small screens -->
+						<div id="showSign">
+							<h2>Signature:</h2>
+							<canvas id="canvas" width="300" height="100"></canvas>
+							<button class= "button" onclick="clearArea()">Clear Area</button>
+						</div>
+						<!--End Signature Canvas Div  -->
+						<br>
+						<input class ="button" type="submit" onclick="submit()" value="Submit" id="contactSubmit" >
+					</form>
+					<!--  End  Contact Form -->
+				</article>
+			</section>
+			<aside>
+				<h2>Contact Details</h2>
+				<p>Phone Number:08003234050</p>
+				<p>Contact Email:HTContact@HipsterTrends.com</p>
+				<p>Post Address:25 Guildhall Street,LN1 6XN Lincoln</p>
+				<!-- Google Maps div for a Canvas that displays google maps -->
+				<div id='gmap_canvas'></div>
+			</aside>
+		</div>
+		<!--End image wrap -->
+	</body>
+</html>

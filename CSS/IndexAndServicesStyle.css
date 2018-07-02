@@ -1,0 +1,222 @@
+/*Header Style*/
+header{
+	height:150px;
+	width:auto;
+	background:rgba(21,39,55,1);
+	text-align:center;
+	font-family:'Ubuntu',serif;
+}
+#logo{ 
+	float:left;
+	width:150px;
+	height:150px;
+}
+header h1 {
+	float:left;
+	margin-left:30px;
+	margin-top:30px;
+	color:white;
+	text-decoration:none;
+	font-size:30px;
+}
+/* End Header Style*/
+/*Body Style*/
+body{
+	background:#787888;
+	margin: 0;
+    padding: 0;
+	font-family:'Ubuntu',serif;
+}
+#content{
+	padding-top:100px;
+	width:auto;
+	z-index:0;
+}
+/*Styles body for Services Page */	
+section{
+	background:rgba(21,39,55,1);
+	height:auto;
+	width:400px;
+	float:left;
+	margin:5px 10px 5px 10px;
+	padding:5px;
+	-webkit-box-shadow: 5px 5px 5px #2F4F4F ;
+    -moz-box-shadow: 5px 5px 5px #2F4F4F ;
+    box-shadow: 5px 5px 5px #2F4F4F;
+	display:inline-block;
+}
+h2,h3,p{
+	color:white;
+	text-align:center;
+	font-family:'Ubuntu',serif;
+}
+article{
+	float:left;
+	margin:5px 0px 10px 5px;
+	background:rgba(15,159,180,1);
+	height:auto;
+	width:auto;
+}
+section a{
+	text-decoration:none;
+	color:white;
+}
+aside{
+	float:left;
+	display:block;
+	width:600px;
+	height:500px;
+	margin:5px 10px 5px 200px;
+	padding:5px;
+	-webkit-box-shadow: 5px 5px 5px #2F4F4F ;
+    -moz-box-shadow: 5px 5px 5px #2F4F4F ;
+    box-shadow: 5px 5px 5px #2F4F4F;
+	background:rgba(15,180,147,1);
+}
+#video{
+	width:100%;
+	max-height:400px;
+}
+/* Alter Section and aside sizes for different screen sizes*/
+@media (max-width: 1285px) {
+	section{
+		height:auto;
+		width:300px;
+	}
+	aside{
+		display:inline-block;
+		width:600px;
+		height:500px;
+		margin:5px 10px 5px 10px;
+		padding:5px;
+		-webkit-box-shadow: 5px 5px 5px #2F4F4F ;
+		-moz-box-shadow: 5px 5px 5px #2F4F4F ;
+		box-shadow: 5px 5px 5px #2F4F4F;
+		background:rgba(15,180,147,1);
+	}
+}
+/*Changes section size */
+@media (max-width: 1000px) {
+	section{
+		height:auto;
+		width:auto;
+	}
+}
+/*Changes page for smartphones*/
+@media (max-width: 650px) {
+	section{
+		width:auto;
+	}
+	aside{
+		display:inline-block;
+		width:auto;
+		height:auto;
+		margin:5px 10px 5px 10px;
+		padding:5px;
+		-webkit-box-shadow: 5px 5px 5px #2F4F4F ;
+		-moz-box-shadow: 5px 5px 5px #2F4F4F ;
+		box-shadow: 5px 5px 5px #2F4F4F;
+		background:rgba(15,180,147,1);
+	}
+	#video{
+		width:300px;
+		height:400px;
+	}
+	/* Alter Header heading*/
+	header h1 {
+		float:left;
+		margin-top:0px;
+		margin-bottom:0px;
+		color:white;
+		font-size:30px;
+		text-decoration:none;
+	}
+	#content{
+		padding-top:10px;
+		width:auto;
+	}
+	section{
+		width:auto;
+	}
+	/*Services Page Video Size*/
+	#video{
+		width:300px;
+		height:400px;
+	}
+}
+
+ /*Responsive Image Tile Styles */
+    .tileWrap {
+      margin: 10px;
+    }
+	/*Style the tile */
+    .tile {
+       float: left;
+       position: relative;
+       width: 20%;
+       padding-bottom: 20%;
+    }/*Style tile whats inside tile*/
+    .tileInside {
+       position: absolute;
+       left: 10px;
+       right: 10px;
+       top: 10px;
+       bottom: 10px;
+       overflow: hidden;
+    }
+	/*Style tile Images*/
+    .tileInside img {
+       width: 100%;
+    }
+	/*Style tile content and tile text for animation*/
+    .tileInside .textBox {
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       margin-bottom: -50px;
+       background: #000;
+       background: rgba(0, 0, 0, 0.5);
+       color: #FFF;
+       padding: 10px;
+       text-align: center;
+       -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+	   -o-transition: all 0.3s ease-out;
+		-ms-transition:all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+    }
+	/*Triggers Animation*/
+   .tileInside:hover .textBox, .textBox {
+       margin-bottom: 0;
+    }
+    @media only screen and (max-width : 480px) {
+       /* Smartphone view: 1 image tile */
+       .tile {
+          width: 100%;
+          padding-bottom: 100%;
+       }
+    }
+    @media only screen and (max-width : 650px) and (min-width : 481px) {
+       /* Tablet view: 2 image tiles */
+       .tile {
+          width: 50%;
+          padding-bottom: 50%;
+       }
+    }
+    @media only screen and (max-width : 1050px) and (min-width : 651px) {
+       /* Small desktop / ipad view: 3 tiles */
+       .tile{
+          width: 33.3%;
+          padding-bottom: 33.3%;
+       }
+    }
+    @media only screen and (max-width : 1290px) and (min-width : 1051px) {
+       /* Medium desktop: 4  image tiles */
+       .tile {
+          width: 25%;
+          padding-bottom: 25%;
+       }
+    }
+	 /*End Responsive Image Tile Styles */
+/*End Body Style*/

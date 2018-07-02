@@ -1,0 +1,312 @@
+/*Header Style*/
+header{
+	height:150px;
+	width:auto;
+	background:rgba(21,39,55,1);
+	text-align:center;
+	font-family:'Ubuntu',serif;
+}
+#logo{ 
+	float:left;
+	width:150px;
+	height:150px;
+}
+header h1 {
+	float:left;
+	margin-left:30px;
+	margin-top:30px;
+	color:white;
+	font-size:30px;
+	text-decoration:none;
+}
+/* End Header Style*/
+/*Popup container styles */
+#popupContent{
+	display:none;
+	background-color: #333;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	color:#FFF;
+	display:none;
+	max-width:500px;
+	padding:0 10px 10px 10px;
+	position:fixed;
+	width:80%;
+	z-index:2;	
+}
+/*Popup heading */
+#popupContent h2{
+	font-size:1.2em;
+	font-weight:bold;
+	padding: 10px;
+}
+/*Popup close button positioning */
+#popupContent > div + div{
+	text-align:right;
+} 
+/*Popup Button Style*/
+.popUpButton{
+	width:100%;
+	background:rgba(21,39,55,1);
+	border:none;
+	padding:4%;
+	font-size:100%;
+	-webkit-border-bottom-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	-webkit-border-bottom-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	color:#fff;
+	outline:none;
+	cursor:pointer;
+	-webkit-transition:background 0.3s;
+	-moz-transition:background 0.3s;
+	-o-transition: background 0.3s;
+	-ms-transition: background 0.3s;
+	transition:background 0.3s;
+}
+/*End Popup Styles */
+/*Body Styles*/
+body{
+	background:#787888;
+	margin: 0;
+    padding: 0;
+	font-family:'Ubuntu',serif;
+}
+#content{
+	padding-top:100px;
+	width:auto;
+	z-index:0;
+}
+h2,p{
+	color:white;
+	text-align:center;
+	font-family:'Ubuntu',serif;
+}
+.disableCheckOut{
+  width:100%;
+  background:#888888;
+  border:0;
+  padding:4%;
+  margin-top:30px;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  -webkit-transition:background 0.3s;
+  -moz-transition:background 0.3s;
+  -o-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  transition:background 0.3s;
+}
+.showCartTable{
+	display:block;
+}
+.hideCartTable{
+	display:none;
+}
+.showDeliveryForm{
+	display:block;
+}
+.hideDeliveryForm{
+	display:none;
+}
+/* Table Style*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+	background:#fff;
+}
+td {
+    text-align: left;
+    padding: 8px;
+	color:black;
+	font-size:15px;
+	border:2px solid rgba(15,159,180,1);
+}
+tr:nth-child(even){
+	background-color: #f2f2f2
+}
+th {
+	text-align: left;
+    padding: 8px;
+	color:black;
+	font-size:15px;
+	border:2px solid rgba(15,159,180,1);
+    background-color: rgba(15,159,180,1);
+    color: white;
+}
+/* End Table Style*/
+/* Large and Medium Desktop Screens Style */
+@media (min-width: 1151px) {
+	section{
+		background:rgba(21,39,55,1);
+		height:auto;
+		width:625px;
+		float:left;
+		margin:30px;
+		padding:5px;
+		-webkit-box-shadow: 5px 5px 5px #2F4F4F ;
+		-moz-box-shadow: 5px 5px 5px #2F4F4F ;
+		box-shadow: 5px 5px 5px #2F4F4F;
+		display:inline-block;
+	}
+	/*Form Style of Desktop Screens*/
+	.button{
+		width:100%;
+		background:rgba(21,39,55,1);
+		border:0;
+		padding:4%;
+		font-size:100%;
+		color:#fff;
+		outline:none;
+		cursor:pointer;
+		-webkit-transition:background 0.3s;
+		-moz-transition:background 0.3s;
+		-o-transition: background 0.3s;
+		-ms-transition: background 0.3s;
+		transition:background 0.3s;
+	}
+	.button:hover{
+		background:rgba(29,47,62,1);
+		outline:none; 
+	}
+	select {
+		outline:none;
+		width:92%;
+		background:#fff;
+		margin-bottom:4%;
+		border:1px solid #ccc;
+		padding:4%;
+		font-size:95%;
+		color:#555;
+	}
+	.required {
+		width:92%;
+		background:#fff;
+		margin-bottom:4%;
+		border:1px solid #ccc;
+		padding:10px;
+		margin:10px;
+		font-size:95%;
+		color:#555;
+	}
+	}
+/*Tablet Screens */
+@media (max-width: 1150px) {
+	section{
+		background:rgba(21,39,55,1);
+		height:auto;
+		width:625px;
+		float:left;
+		margin-top:20px;
+		margin-left:30px;
+		padding:5px;
+		opacity:1;
+		-webkit-box-shadow: 5px 5px 5px #2F4F4F ;
+		-moz-box-shadow: 5px 5px 5px #2F4F4F ;
+		box-shadow: 5px 5px 5px #2F4F4F;
+		display:inline-block;
+	}
+	/*Forms  Style for tablets*/
+	.button{
+		width:100%;
+		background:rgba(21,39,55,1);
+		border:0;
+		padding:4%;
+		font-size:100%;
+		color:#fff;
+		cursor:pointer;
+		-webkit-transition:background 0.3s;
+		-moz-transition:background 0.3s;
+		-o-transition: background 0.3s;
+		-ms-transition: background 0.3s;
+		transition:background 0.3s;
+	}
+	.button:hover{
+		background:rgba(29,47,62,1);
+	}
+	select {
+		width:92%;
+		background:#fff;
+		margin-bottom:4%;
+		border:1px solid #ccc;
+		padding:4%;
+		outline:none;
+		font-size:95%;
+		color:#555;
+	}
+	.required {
+		width:92%;
+		background:#fff;
+		margin-bottom:4%;
+		border:1px solid #ccc;
+		padding:10px;
+		margin:10px;
+		font-size:95%;
+		color:#555;
+	}
+}
+/* Smart phone Styles */
+@media(max-width:650px){
+	header h1 {
+		float:left;
+		margin-top:0px;
+		margin-bottom:0px;
+		color:white;
+		text-decoration:none;
+	}
+	#content{
+		padding-top:10px;
+		width:auto;
+	}	
+	section{
+		background:rgba(21,39,55,1);
+		height:auto;
+		width:100%;
+		margin-left:0px;
+		margin-top:20px;
+		padding:0px;
+		-webkit-box-shadow: 5px 5px 5px #2F4F4F ;
+		-moz-box-shadow: 5px 5px 5px #2F4F4F ;
+		box-shadow: 5px 5px 5px #2F4F4F;
+		display:inline-block;
+	}
+	/*Forms Style for Smart Phones*/
+	.button{
+		width:100%;
+		background:rgba(21,39,55,1);
+		border:0;
+		padding:4%;
+		font-size:100%;
+		color:#fff;
+		cursor:pointer;
+		-webkit-transition:background 0.3s;
+		-moz-transition:background 0.3s;
+		-o-transition: background 0.3s;
+		-ms-transition: background 0.3s;
+		transition:background 0.3s;
+	}
+	.button:hover{
+		background:rgba(29,47,62,1);
+	}
+	select {
+		width:92%;
+		background:#fff;
+		margin-bottom:4%;
+		border:1px solid #ccc;
+		padding:4%;
+		font-size:95%;
+		color:#555;
+	}
+	.required {
+		width:70%;
+		background:#fff;
+		margin-bottom:4%;
+		border:1px solid #ccc;
+		padding:10px;
+		margin:10px;
+		font-size:95%;
+		color:#555;
+	}
+}
+

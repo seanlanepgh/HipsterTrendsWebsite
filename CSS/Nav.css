@@ -1,0 +1,142 @@
+nav{
+	max-width:100%;
+}
+nav ul {
+	padding: 0;
+	margin :0px;
+	list-style: none;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+nav a {
+	display: block;
+	color: rgba(249, 249, 249, .9);
+	text-decoration: none;
+}
+/* Hover effect for the whole navigation to make the hovered item stand out */
+nav ul:hover a {
+	color: rgba(249, 249, 249, .5);
+}
+nav ul:hover a:hover {
+	color: rgba(249, 249, 249, 0.99);
+}
+/* Adding some background color to the different menu items */
+nav li {
+	background: #336699;
+}
+/* Used to show and hide the mobile navigation bar*/
+.handle{
+	display:none;
+}
+/* For screen bigger than 800px */
+@media (min-width: 800px) {
+	/* Transforms the list into a horizontal navigation */
+	nav li {
+		float: left;
+		width: 16.66666666666667%;
+		text-align: center;
+		-webkit-transition: border 0.5s;
+		-moz-transition: border 0.5s;
+		-o-transition: border 0.5s;
+		-ms-transition: border 0.5s;
+		transition: border 0.5s;
+	}
+	nav a {
+		display: block;
+		width: auto;
+	}
+	nav li a:hover,
+	nav li a:active,
+	nav li a:focus {
+		border-bottom: 4px solid rgb(10, 75, 117);
+	}
+	nav a {
+		height: 60px;
+	}
+	.handle{
+		display:none;
+	}	
+}
+@media (min-width: 800px) and (max-width:980px) {
+	/* Size and font adjustments to make it fit into the screen*/
+	nav ul {
+		font-size: 1.2em;
+		margin :0px;
+	}
+}
+
+/* The tablet and mobile versions */
+@media (max-width: 799px) {		
+	/* Instead of adding a border, transition the background color */
+	nav li a:hover,
+	nav li a:active,
+	nav li a:focus {
+		background: rgb(44, 168, 219);
+	}
+	nav ul li {
+		-webkit-transition: background 0.5s;
+		-moz-transition: background 0.5s;
+		-o-transition: background 0.5s;
+		-ms-transition: background 0.5s;
+		transition: background 0.5s;
+	}	
+	.handle{
+		display:none;
+	}	
+}
+/* CSS specific to the 2x3 columns version of the Navgation Bar */
+@media (min-width:520px) and (max-width:799px) {
+	/* Creating the 2 column layout*/
+	nav li {
+		display: block;
+		float: left;
+		width: 50%;
+	}
+	/* Adding some padding to make the elements easier to touch on tablet*/
+	nav a {
+		padding: 1em;		
+	}
+	.handle{
+		display:none;
+	}	
+}
+/*Mobile Phone Style*/
+@media (max-width:519px) {
+	/* Adding a left border of 8 px for each menu item*/
+	nav li {
+		border-left: 8px solid rgb(10, 75, 117);
+	}
+	/* Adding Style for the  mobile menu  handle item to make it stand out*/
+	.handle{
+		display:block;
+	}
+	nav .handle li {
+		border-left: 8px solid rgb(16, 34, 44);
+		color:rgba(255,255,255,0.5);
+		font-size: 1em;
+		padding:20px;
+		list-style: none;
+		width:100%;
+		text-align:left;
+		box-sizing:border-box;
+		cursor:pointer;
+		display:block;
+		font-size: 1.5em;
+		list-style: none;
+	}
+	nav .handle li:hover{
+		background: rgb(44, 168, 219);
+		color:rgba(255,255,255,0.99);
+	}
+	/* make the nav bigger on touch screens */
+	nav a {
+		padding: 1em;
+	}
+	/*Shows and hide the navigation bar for mobile menu*/
+	.noShowing{
+		display:none;
+	}
+	.Showing{
+		display:block;
+	}
+}
